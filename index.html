@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Challenge 1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+        <link rel="stylesheet" type="text/css" href="style/form.css">
+    </head>
+    <body>
+        <div class="page">
+            <div class="section menu">
+                <img src='style/icons/logo.png' id="logo"/>
+            </div>
+            <div id="chartDiv">
+                <div class="section info">
+                    <img src='style/icons/distance.png'/>
+                    <p class="title">Afgelegde afstand</p>
+                </div>
+                <canvas id="lineChart"></canvas>
+            </div>
+            <div id="donutDiv">
+                <div class="section info">
+                    <img src='style/icons/cloudy.png'/>
+                    <p class="title">Atmosfeer Mars</p>
+                </div>
+                <canvas id="donutChart"></canvas>
+            </div>
+            <div id="gravityCalc">
+                <div class="section info">
+                    <img src='style/icons/gravity.png'/>
+                    <p class="title">Zwaartekracht berekenen</p>
+                </div>
+                <form id="calcGravity" action="">
+                    <fieldset>
+                        <label>
+                            <input id="weight" name="weight" type="number" />
+                            <div class="weight">Gewicht in Kg</div>
+                        </label>
+                            <button type="submit" form="calcGravity" value="submit">Bereken</button>
+                            <label>
+                            <input id="gravity" name="gravity" type="number" />
+                                <div class="gravity" for="gravity">Zwaartekracht in Newton</div>
+                            </label>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript" src="scripts/Chart.bundle.js"></script>
+        <script type="text/javascript" src="scripts/main.js"></script>
+        <script type="text/javascript" src="scripts/gravity.js"></script>
+    </body>
+</html>

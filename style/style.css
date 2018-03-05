@@ -1,0 +1,72 @@
+ @font-face { 
+     font-family: 'TnS'; 
+     src: url('fonts/Time N Space.ttf');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    background-image: url("images/stars.jpeg");
+}
+
+.section {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.title {
+    color: white;
+    font-family: 'TnS';
+}
+.menu {
+  background-color: #333333;
+  height: 80px;
+}
+
+.info {
+  background: linear-gradient(to bottom right, #18244a, #3e5589, #8087b3, #c8b1c3 );
+}
+#logo {
+    width: 150px;
+}
+
+#calcGravity {
+    border:
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 400px) {
+  body {
+  }
+    #chartDiv {
+        width: 100%; 
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body { 
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 961px) {
+  body {
+  }
+    #chartDiv {
+        width: 50%;
+        float: left;
+}
+    #donutDiv {
+        width: 50%;
+        float: right;
+    }
+}
+
