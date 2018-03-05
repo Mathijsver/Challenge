@@ -5,8 +5,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
+
 body {
     background-image: url("images/stars.jpeg");
 }
@@ -17,8 +17,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
+
 
 .title {
     color: white;
@@ -36,8 +36,13 @@ body {
     width: 150px;
 }
 
-#calcGravity {
-    border:
+/* Deze lines code zijn eigenlijk niet nodig, maar de chart.js veroorzaakte dat de blokken steeds van afmetingen veranderden, dit was mijn poging om het in ieder geval voor mijn eigen desktop te fixen */
+
+#lineChart {
+    max-width: 750px;
+}
+#donutChart {
+    max-width: 750px;
 }
 
 
@@ -48,12 +53,21 @@ body {
     #chartDiv {
         width: 100%; 
     }
+    #donutDiv {
+        width: 100%;
+    }
+    #gravityCalc {
+        width: 100%;
+    }
 }
 
 /* Tablet */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   body { 
   }
+    #gravityCalc {
+        width: 100%;
+    }
 }
 
 /* Desktop */
@@ -67,6 +81,9 @@ body {
     #donutDiv {
         width: 50%;
         float: right;
+    }
+    #gravityCalc {
+        width: 100%;
     }
 }
 

@@ -7,10 +7,17 @@ form {
   text-align: center;
 }
 
+/* Rond de fieldset zat een border, waarschijnlijk veroorzaakt door een webkit, ik heb daarom de border op 0 px gespecificeerd */
+
+fieldset {
+    border: 0px;
+}
+
 label {
   display: block;
   letter-spacing: 4px;
   padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
   color: white;
 }
@@ -38,10 +45,6 @@ label input {
   text-align: center;
   transition: all 0.3s;
   width: 200px;
-}
-label input:focus {
-  max-width: 100%;
-  width: 400px;
 }
 label input:focus + .label-text {
   color: #F0F0F0;
@@ -82,4 +85,22 @@ input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+/* Het breder maken van de input lijn zorgt er bij de mobiele versie voor dat de body breder wordt,
+daarom is dit nu alleen gespecificeerd voor desktop en tablet*/
+
+/* Tablet */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    label input:focus {
+  max-width: 100%;
+  width: 400px;
+    }
+}
+/* Desktop */
+@media only screen and (min-width: 961px) {
+    label input:focus {
+  max-width: 100%;
+  width: 400px;
+    }
 }
